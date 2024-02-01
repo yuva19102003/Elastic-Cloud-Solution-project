@@ -10,7 +10,7 @@
 | 01. management Console | [`Click here`]() |
 | 02. Terraform | [`Click here`]() |
 
-![flowchart](flowchart.png)
+![flowchart](flowchart.drawio.png)
 
 
 **Project Overview:**
