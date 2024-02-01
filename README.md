@@ -2,7 +2,7 @@
 
 ----
 
-Elastic Cloud Solution: VPC Peering, EFS, Auto Scaling, and Load Balancer for Resilient and Efficient Applications
+## Elastic Cloud Solution: VPC Peering, EFS, Auto Scaling, SESSION Manager and Load Balancer for Resilient and Efficient Applications
 
 
 ----
