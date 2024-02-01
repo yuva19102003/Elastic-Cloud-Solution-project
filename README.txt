@@ -43,17 +43,20 @@ Certainly! Here are some additional details you can include in your project plan
 4. **Mounting EFS in Auto Scaling Instances:**
    - Update user data in the launch configuration to mount the EFS file system on Auto Scaling instances.
 
-5. **Load Balancing:**
+5. **Session manager:**
+   - using the Session manager we can login to the private subnet ec2 without key pairs,inbound rules and ssh to it.
+
+6. **Load Balancing:**
    - Set up a Target Group in VPC-B.
    - Create an Application Load Balancer (ALB) in the public subnet of VPC-B.
    - Configure the ALB to use the Target Group.
 
-6. **Testing and Monitoring:**
+7. **Testing and Monitoring:**
    - Validate the connectivity between EFS in VPC-A and Auto Scaling instances in VPC-B.
    - Monitor the performance and scaling behavior of the Auto Scaling Group.
    - Ensure the load balancer distributes traffic effectively among Auto Scaling instances.
 
-7. **Documentation and Deployment Guide:**
+8. **Documentation and Deployment Guide:**
    - Prepare comprehensive documentation detailing the architecture, configurations, and deployment steps.
    - Include troubleshooting guidelines and best practices.
 
