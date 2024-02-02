@@ -1,3 +1,11 @@
+----
+
+# Elastic-Cloud-Solution-project
+
+## Elastic Cloud Solution: VPC Peering, EFS, Auto Scaling, SESSION Manager and Load Balancer for Resilient and Efficient Applications using aws management console
+## FLOWCHART
+![flowchart](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/flowchart.drawio.png)
+
 ![assest](assest/1.png)
 ![assest](assest/2.png)
 ![assest](assest/3.png)
