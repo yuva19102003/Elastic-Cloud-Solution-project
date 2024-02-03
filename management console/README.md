@@ -14,7 +14,8 @@
   - Target Group
   - Application Load Balancer (ALB)
 
-**Project Steps:**
+----
+
 **Project Steps:**
 1. **VPC Setup:**
     - Create VPCs: VPC-A (for EFS) and VPC-B (for Auto Scaling).
@@ -24,11 +25,18 @@
 ![assest](assest/3.png)
 ![assest](assest/4.png)
 
-   - Configure VPC Peering Connection between VPC-A and VPC-B.
+----
 
+   - Configure VPC Peering Connection between VPC-A and VPC-B.
 ![assest](assest/5.png)
 ![assest](assest/6.png)
 ![assest](assest/7.png)
+
+----
+2. **EFS Configuration:**
+   - Create an Elastic File System (EFS) in VPC-A.
+   - Set up security groups and network ACLs to allow communication with VPC-B.
+
 ![assest](assest/8.png)
 ![assest](assest/9.png)
 ![assest](assest/10.png)
