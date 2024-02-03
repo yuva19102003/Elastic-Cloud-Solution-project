@@ -65,13 +65,48 @@
 ![assest](assest/17.png)
 ![assest](assest/18.png)
 ![assest](assest/19.png)
+
+----
+5. **Session manager:**
+   - using the Session manager we can login to the private subnet ec2 without key pairs,inbound rules and ssh to it.
+   
 ![assest](assest/20.png)
 ![assest](assest/21.png)
 ![assest](assest/22.png)
+
+----
+ **Load Balancing:**
+   - Set up a Target Group in VPC-B.
+   - Create an Application Load Balancer (ALB) in the public subnet of VPC-B.
+   - Configure the ALB to use the Target Group.
+   - 
 ![assest](assest/23.png)
 ![assest](assest/24.png)
 ![assest](assest/25.png)
+
+----
+
+
+7. **Testing and Monitoring:**
+   - Validate the connectivity between EFS in VPC-A and Auto Scaling instances in VPC-B.
+   - Monitor the performance and scaling behavior of the Auto Scaling Group.
+   - Ensure the load balancer distributes traffic effectively among Auto Scaling instances.
+   
 ![assest](assest/26.png)
 ![assest](assest/27.png)
+
+----
+8. **Documentation and Deployment Guide:**
+   - Prepare comprehensive documentation detailing the architecture, configurations, and deployment steps.
+   - Include troubleshooting guidelines and best practices.
+     
 ![assest](assest/28.png)
 ![assest](assest/29.png)
+
+----
+
+**Conclusion:**
+Successfully implementing this project will result in a resilient and scalable cloud architecture, utilizing VPC peering for secure communication, EFS for shared file storage, Auto Scaling for dynamic resource management, and an ALB for distributing incoming traffic across instances.
+
+----
+
