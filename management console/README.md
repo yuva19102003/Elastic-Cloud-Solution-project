@@ -35,11 +35,17 @@
 ----
 2. **EFS Configuration:**
    - Create an Elastic File System (EFS) in VPC-A.
-   - Set up security groups and network ACLs to allow communication with VPC-B.
+ 
 
 ![assest](assest/8.png)
+
+- Set up security groups and network ACLs to allow communication with VPC-B.
+
 ![assest](assest/9.png)
 ![assest](assest/10.png)
+
+----
+
 ![assest](assest/11.png)
 ![assest](assest/12.png)
 ![assest](assest/13.png)
