@@ -15,11 +15,17 @@
   - Application Load Balancer (ALB)
 
 **Project Steps:**
+**Project Steps:**
+1. **VPC Setup:**
+    - Create VPCs: VPC-A (for EFS) and VPC-B (for Auto Scaling).
 
 ![assest](assest/1.png)
 ![assest](assest/2.png)
 ![assest](assest/3.png)
 ![assest](assest/4.png)
+
+   - Configure VPC Peering Connection between VPC-A and VPC-B.
+
 ![assest](assest/5.png)
 ![assest](assest/6.png)
 ![assest](assest/7.png)
