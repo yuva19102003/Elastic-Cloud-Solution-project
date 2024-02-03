@@ -44,13 +44,23 @@
 ![assest](assest/9.png)
 ![assest](assest/10.png)
 
-----
-
 ![assest](assest/11.png)
 ![assest](assest/12.png)
 ![assest](assest/13.png)
 ![assest](assest/14.png)
+
+----
+3. **Auto Scaling Setup:**
+   - Configure a launch configuration with necessary AMI and user data in VPC-B.
+   - Create an Auto Scaling Group in the private subnet of VPC-B.
+   - Use the VPC peering connection for cross-VPC communication
+   
 ![assest](assest/15.png)
+
+----
+4. **Mounting EFS in Auto Scaling Instances:**
+   - Update user data in the launch configuration to mount the EFS file system on Auto Scaling instances.
+   
 ![assest](assest/16.png)
 ![assest](assest/17.png)
 ![assest](assest/18.png)
