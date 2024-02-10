@@ -27,7 +27,7 @@
 This guide outlines the steps to create two Virtual Private Clouds (VPCs) - VPC-A and VPC-B, each serving specific purposes. VPC-A is designed to host Amazon Elastic File System (EFS), while VPC-B is intended for Auto Scaling applications.
 
 ## VPC-A (for EFS)
-![assest](assest/2.png)
+- ![assest](assest/2.png)
 ### Steps
 1. **Create VPC**
    - Set up a new VPC with a unique CIDR block.
@@ -40,7 +40,7 @@ This guide outlines the steps to create two Virtual Private Clouds (VPCs) - VPC-
    - Attach an Internet Gateway to enable communication with the internet.
 
 4. **Route Tables**
- ![assest](assest/3.png)
+- ![assest](assest/3.png)
    - Configure route tables for both public and private subnets.
    - Associate the public subnet with the Internet Gateway.
 
@@ -51,7 +51,7 @@ This guide outlines the steps to create two Virtual Private Clouds (VPCs) - VPC-
 ----
 
 ## VPC-B (for Auto Scaling)
-![assest](assest/1.png)
+- ![assest](assest/1.png)
 
 ### Steps
 1. **Create VPC**
@@ -76,7 +76,7 @@ This guide outlines the steps to create two Virtual Private Clouds (VPCs) - VPC-
 
 
 
-![assest](assest/4.png)
+- ![assest](assest/4.png)
 
 ----
 
@@ -84,7 +84,7 @@ This guide outlines the steps to create two Virtual Private Clouds (VPCs) - VPC-
 
 ## Getting Started
 
-![assest](assest/5.png)
+- ![assest](assest/5.png)
 
 
 1. **Access AWS Management Console:**
@@ -102,8 +102,8 @@ This guide outlines the steps to create two Virtual Private Clouds (VPCs) - VPC-
 5. **Accept Peering Connection:**
    In the target VPC, accept the peering connection request.
    
-![assest](assest/6.png)
-![assest](assest/7.png)
+- ![assest](assest/6.png)
+- ![assest](assest/7.png)
 
 7. **Verify Connection:**
    Validate the status of the VPC peering connection in the AWS Management Console.
@@ -127,24 +127,24 @@ Explore more about VPC peering and related technologies through the official AWS
 
 3. **Create File System:**
    Follow the on-screen instructions to create a new Amazon EFS file system.
-![assest](assest/8.png)
+- ![assest](assest/8.png)
 
 4. **Configure File System:**
    Provide the necessary details, including the VPC, security groups, and subnet IDs.
 
-![assest](assest/9.png)
-![assest](assest/10.png)
+- ![assest](assest/9.png)
+- ![assest](assest/10.png)
 
 5. **Configure Access Points (Optional):**
    Set up access points to manage file access more granularly if needed.
-   ![assest](assest/11.png)
-![assest](assest/12.png)
+- ![assest](assest/11.png)
+- ![assest](assest/12.png)
 
 7. **Mount File System:**
    Obtain the DNS name for your EFS file system and mount it to your EC2 instances or on-premises servers.
 
-![assest](assest/13.png)
-![assest](assest/14.png)
+- ![assest](assest/13.png)
+- ![assest](assest/14.png)
 ## Additional Resources
 
 Explore more about Amazon EFS and related technologies through the official AWS documentation:
@@ -162,7 +162,7 @@ Explore more about Amazon EFS and related technologies through the official AWS 
 
 2. **Navigate to EC2 Dashboard:**
    Go to the EC2 Dashboard from the AWS Management Console.
-![assest](assest/15.png)
+- ![assest](assest/15.png)
 
 3. **Create Launch Template:**
    - In the navigation pane, select "Launch Templates."
@@ -176,8 +176,8 @@ Explore more about Amazon EFS and related technologies through the official AWS 
 5. **Add User Data (Optional):**
    - Include user data scripts or configuration to be executed when the instance launches.
 
-![assest](assest/16.png)
-![assest](assest/17.png)
+- ![assest](assest/16.png)
+- ![assest](assest/17.png)
 
 6. **Configure Advanced Settings (Optional):**
    - Customize advanced settings like monitoring, T2/T3 unlimited mode, and instance termination protection.
@@ -197,7 +197,7 @@ Explore more about Amazon EFS and related technologies through the official AWS 
 
 3. **Review and Launch:**
    - Review your configuration and click "Launch" to deploy instances using the launch template.
-![assest](assest/18.png)
+- ![assest](assest/18.png)
 
 
 ## Additional Resources
@@ -211,7 +211,7 @@ Explore more about AWS Launch Templates and related technologies through the off
    - Configure a launch configuration with necessary AMI and user data in VPC-B.
    - Create an Auto Scaling Group in the private subnet of VPC-B.
    - Use the VPC peering connection for cross-VPC communication
-![assest](assest/19.png)
+- ![assest](assest/19.png)
 
 # AWS Auto Scaling Quick Setup
 
@@ -251,7 +251,7 @@ Explore more about AWS Launch Templates and related technologies through the off
 2. **Navigate to Session Manager:**
    - In the AWS Systems Manager console, select "Session Manager."
  
-![assest](assest/20.png)
+- ![assest](assest/20.png)
 
 3. **Start a Session:**
    - Choose an instance and start a session without SSH/RDP.
@@ -259,13 +259,13 @@ Explore more about AWS Launch Templates and related technologies through the off
 4. **Interact with the Instance:**
    - Gain interactive shell access to the instance without direct connectivity.
   
-![assest](assest/21.png)
+- ![assest](assest/21.png)
 5. **Review and Terminate Sessions:**
    - Monitor active sessions and terminate them when necessary.
 
 6. **Enhanced Security:**
    - Leverage Session Manager's secure and auditable session access.
-  ![assest](assest/22.png)
+- ![assest](assest/22.png)
 
 **Mounting EFS in Auto Scaling Instances:**
    - Update user data in the launch configuration to mount the EFS file system on Auto Scaling instances.
@@ -284,12 +284,12 @@ Explore more in the [AWS Session Manager Documentation](https://docs.aws.amazon.
 2. **Navigate to EC2 Dashboard:**
    - In the EC2 Dashboard, select "Load Balancers."
 
-![assest](assest/23.png)
-![assest](assest/24.png)
+- ![assest](assest/23.png)
+- ![assest](assest/24.png)
 3. **Create Application Load Balancer (ALB):**
    - Click "Create Load Balancer" and choose "Application Load Balancer."
 
-![assest](assest/25.png)
+- ![assest](assest/25.png)
 
 4. **Configure ALB Settings:**
    - Define the load balancer name, scheme, listeners, and availability zones.
@@ -315,16 +315,16 @@ Explore more in the [AWS ALB Documentation](https://docs.aws.amazon.com/elasticl
    - Monitor the performance and scaling behavior of the Auto Scaling Group.
    - Ensure the load balancer distributes traffic effectively among Auto Scaling instances.
    
-![assest](assest/26.png)
-![assest](assest/27.png)
+- ![assest](assest/26.png)
+- ![assest](assest/27.png)
 
 ----
 8. **Documentation and Deployment Guide:**
    - Prepare comprehensive documentation detailing the architecture, configurations, and deployment steps.
    - Include troubleshooting guidelines and best practices.
      
-![assest](assest/28.png)
-![assest](assest/29.png)
+- ![assest](assest/28.png)
+- ![assest](assest/29.png)
 
 ----
 
