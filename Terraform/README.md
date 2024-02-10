@@ -91,7 +91,7 @@ the module is classified into three catagories.
 - EFS
 - EC2
 
-
+---
 
 # Terraform VPC Module
 
@@ -154,6 +154,8 @@ This Terraform module streamlines the creation of a Virtual Private Cloud (VPC) 
 
 - **Route Tables:** Control traffic routing within the VPC, ensuring efficient network communication.
 
+---
+
 # Terraform EFS Module
 
 This Terraform module simplifies the configuration and deployment of Amazon Elastic File System (EFS) on your cloud platform.
@@ -177,7 +179,8 @@ This Terraform module simplifies the configuration and deployment of Amazon Elas
 - Performance Optimization: Fine-tune performance settings based on your application's requirements and usage patterns.
 
 - Backup and Recovery: Implement backup and recovery strategies to ensure data durability and availability.
-  
+
+---
 
 # Terraform EC2 Auto Scaling Module
 
@@ -215,5 +218,40 @@ This Terraform module simplifies the deployment of scalable and resilient infras
 - **Application Load Balancer:** Create an Application Load Balancer for evenly distributing incoming traffic across instances in the Target Group.
 
 - **High Availability:** Ensure high availability and fault tolerance by distributing instances across multiple Availability Zones.
+
+---
+
+# Terraform Infrastructure Setup
+
+This Terraform configuration facilitates the deployment of a resilient and scalable cloud infrastructure using three specialized modules:
+
+## 1. VPC Module
+
+**Features:**
+- **VPC Configuration:** Establish a customizable Virtual Private Cloud (VPC) with specified IP ranges and subnets.
+- **Security Groups:** Define and manage rules for inbound and outbound traffic within the VPC.
+- **NAT Gateways:** Enable secure internet access for instances in private subnets.
+- **VPC Peering:** Establish connections between different VPCs for seamless communication.
+- **Route Tables:** Control traffic routing within the VPC for efficient network communication.
+
+## 2. EFS Module
+
+**Features:**
+- **EFS Creation:** Set up Amazon Elastic File System (EFS) for scalable and elastic file storage.
+- **Mount Targets:** Configure mount targets to access EFS securely from the Virtual Private Cloud (VPC).
+- **Security Groups:** Customize security group rules for controlling network traffic.
+- **Performance Optimization:** Fine-tune performance settings based on application requirements.
+- **Backup and Recovery:** Implement strategies for data durability and availability.
+
+## 3. EC2 Auto Scaling Module
+
+**Features:**
+- **Launch Configuration:** Configure specifications for Amazon EC2 instances within the Auto Scaling Group.
+- **Auto Scaling Group:** Dynamically adjust the number of EC2 instances based on demand or schedule.
+- **Target Groups:** Define routing for traffic to EC2 instances within the Auto Scaling Group.
+- **Application Load Balancer:** Distribute incoming traffic evenly across instances with a load balancer.
+- **High Availability:** Distribute instances across multiple Availability Zones for fault tolerance.
+
+Customize these modules to meet your specific infrastructure requirements. Feel free to contribute or report issues!
 
 ----
