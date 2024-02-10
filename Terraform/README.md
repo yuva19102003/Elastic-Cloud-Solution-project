@@ -2,8 +2,8 @@
 
 ----
 
-## tree structure
-the terraform main configuration and module tree structure of this project [`terraform structure`](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/Terraform/terraform-structure.txt)
+## Tree structure
+the terraform main configuration and module tree structure of this project [`terraform Tree structure`](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/Terraform/terraform-structure.txt)
 
 ```bash
 .
@@ -85,5 +85,13 @@ the terraform main configuration and module tree structure of this project [`ter
 23 directories, 51 files
 
 ```
+## Graph structure
+
+the graph sturcture of the whole terraform main configuration and the modules. 
+[`terraform graph structure`](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/Terraform/terraform-graph.png)
+```bash
+terraform graph |dot -Tpng > terraform-graph.png
+```
+<img src="https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/Terraform/terraform-graph.png">
 
 ----
