@@ -1,6 +1,17 @@
 #     Elastic-Cloud-Solution-project using Terraform
 
+## Elastic Cloud Solution: VPC Peering, EFS, Auto Scaling, SESSION Manager and Load Balancer for Resilient and Efficient Applications
+
 ----
+
+**Project Overview:**
+- **Objective:** Establish a robust and scalable architecture across two Virtual Private Clouds (VPCs) on a cloud platform using terraform IaC.
+- **Key Components:**
+  - VPC Peering Connection
+  - Elastic File System (EFS)
+  - Auto Scaling Group
+  - Target Group
+  - Application Load Balancer (ALB)
 
 # Tree structure
 - the whole tree structure of terraform main configuration and modules
