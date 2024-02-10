@@ -2,8 +2,8 @@
 
 ----
 
-## structure
-the terraform main configuration and module structure of this project
+## tree structure
+the terraform main configuration and module tree structure of this project [`terraform structure`](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/Terraform/terraform-structure.txt)
 
 ```bash
 .
