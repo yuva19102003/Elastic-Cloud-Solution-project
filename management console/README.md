@@ -18,6 +18,51 @@
 **Project Steps:**
 1. **VPC Setup:**
     - Create VPCs: VPC-A (for EFS) and VPC-B (for Auto Scaling).
+# Create VPCs: VPC-A (for EFS) and VPC-B (for Auto Scaling)
+
+## Overview
+This guide outlines the steps to create two Virtual Private Clouds (VPCs) - VPC-A and VPC-B, each serving specific purposes. VPC-A is designed to host Amazon Elastic File System (EFS), while VPC-B is intended for Auto Scaling applications.
+
+## VPC-A (for EFS)
+### Steps
+1. **Create VPC**
+   - Set up a new VPC with a unique CIDR block.
+  
+2. **Subnets**
+   - Establish public and private subnets within VPC-A.
+   - Allocate appropriate CIDR blocks to these subnets.
+
+3. **Internet Gateway**
+   - Attach an Internet Gateway to enable communication with the internet.
+
+4. **Route Tables**
+   - Configure route tables for both public and private subnets.
+   - Associate the public subnet with the Internet Gateway.
+
+5. **Security Groups**
+   - Define security groups to control inbound and outbound traffic.
+   - Allow necessary traffic for EFS.
+
+## VPC-B (for Auto Scaling)
+### Steps
+1. **Create VPC**
+   - Establish a new VPC with a distinct CIDR block.
+
+2. **Subnets**
+   - Create public and private subnets within VPC-B.
+   - Allocate appropriate CIDR blocks to these subnets.
+
+3. **Internet Gateway**
+   - Attach an Internet Gateway to allow communication with the internet.
+
+4. **Route Tables**
+   - Configure route tables for public and private subnets.
+   - Associate the public subnet with the Internet Gateway.
+
+5. **Security Groups**
+   - Define security groups to regulate inbound and outbound traffic.
+   - Allow necessary traffic for Auto Scaling applications.
+
 
 ![assest](assest/1.png)
 ![assest](assest/2.png)
