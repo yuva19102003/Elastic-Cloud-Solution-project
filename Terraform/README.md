@@ -4,6 +4,9 @@
 
 ----
 
+![DIAGRAM](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/elastic-cloud-solution-project.gif)
+
+
 **Project Overview:**
 - **Objective:** Establish a robust and scalable architecture across two Virtual Private Clouds (VPCs) on a cloud platform using terraform IaC.
 - **Key Components:**
