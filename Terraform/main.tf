@@ -24,12 +24,12 @@ module "nat" {
   nat-gw-public-subnet = module.production.public-subnet-id # use the public subnet id from the output.tf and assign to it
 }
 #--------------------------------------------------------------------------------------------------
-# maintainance vpc
+# maintenance vpc
 
-module "maintainance" {
+module "maintenance" {
 
   source                    = "./modules/vpc/vpc"
-  vpc-name                  = "maintainance-vpc"
+  vpc-name                  = "maintenance-vpc"
   vpc-cidr-block            = "172.31.0.0/16"
   subnet-az                 = ["us-east-1a"]
   private-subnet-cidr-block = ["172.31.128.0/20"]
@@ -44,7 +44,7 @@ module "peering-vpc" {
 
   source           = "./modules/vpc/peering-connection"
   requester-vpc-id = module.production.vpc-id
-  accepter-vpc-id  = module.maintainance.vpc-id
+  accepter-vpc-id  = module.maintenance.vpc-id
 
 }
 
@@ -163,51 +163,51 @@ module "rt-association-production-private-subnet-1" {
 
 #--------------------------------------------------------------------------------------------------
 
-# route-table-maintainance-public-subnet-0
+# route-table-maintenance-public-subnet-0
 
-module "route-table-maintainance-public-subnet-0" {
+module "route-table-maintenance-public-subnet-0" {
   source             = "./modules/vpc/rt/route-table"
-  route-table-vpc-id = module.maintainance.vpc-id
+  route-table-vpc-id = module.maintenance.vpc-id
 
 }
 # internet gateway route
-module "internet-gw-route-maintainance-public-subnet-0" {
+module "internet-gw-route-maintenance-public-subnet-0" {
   source              = "./modules/vpc/rt/route/internet-gateway"
-  route-table-id      = module.route-table-maintainance-public-subnet-0.route-table-id
-  internet-gateway-id = module.maintainance.internet-gateway-id
+  route-table-id      = module.route-table-maintenance-public-subnet-0.route-table-id
+  internet-gateway-id = module.maintenance.internet-gateway-id
 }
 
 # route table association 
-module "rt-association-maintainance-public-subnet-0" {
+module "rt-association-maintenance-public-subnet-0" {
   source                        = "./modules/vpc/rt/route-table-association"
-  rt-association-subnet-id      = module.maintainance.public-subnet-id[0]
-  rt-association-route-table-id = module.route-table-maintainance-public-subnet-0.route-table-id
+  rt-association-subnet-id      = module.maintenance.public-subnet-id[0]
+  rt-association-route-table-id = module.route-table-maintenance-public-subnet-0.route-table-id
 }
 #--------------------------------------------------------------------------------------------------
 
-# route-table-maintainance-private-subnet-1
+# route-table-maintenance-private-subnet-1
 
-module "route-table-maintainance-private-subnet-0" {
+module "route-table-maintenance-private-subnet-0" {
   source             = "./modules/vpc/rt/route-table"
-  route-table-vpc-id = module.maintainance.vpc-id
+  route-table-vpc-id = module.maintenance.vpc-id
 
 }
 
 # vpc peering connections route
 
-module "peering-route-maintainance-private-subnet-0" {
+module "peering-route-maintenance-private-subnet-0" {
   source                 = "./modules/vpc/rt/route/peering-connection"
-  route-table-id         = module.route-table-maintainance-private-subnet-0.route-table-id
+  route-table-id         = module.route-table-maintenance-private-subnet-0.route-table-id
   destination-cidr-block = "10.0.0.0/16"
   peering-connection-id  = module.peering-vpc.vpc-peering-connection-id
 
 }
 
 # route table association 
-module "rt-association-maintainance-private-subnet-0" {
+module "rt-association-maintenance-private-subnet-0" {
   source                        = "./modules/vpc/rt/route-table-association"
-  rt-association-subnet-id      = module.maintainance.private-subnet-id[0]
-  rt-association-route-table-id = module.route-table-maintainance-private-subnet-0.route-table-id
+  rt-association-subnet-id      = module.maintenance.private-subnet-id[0]
+  rt-association-route-table-id = module.route-table-maintenance-private-subnet-0.route-table-id
 }
 
 #--------------------------------------------------------------------------------------------------
@@ -265,28 +265,28 @@ module "production-sg-inbound-peering" {
 }
 #--------------------------------------------------------------------------------------------------
 
-# security group for maintainance vpc
+# security group for maintenance vpc
 
-module "maintainance-security-group" {
+module "maintenance-security-group" {
   source              = "./modules/vpc/security-group/sg"
-  security-group-name = "maintainance-sg"
-  sg-tag              = "maintainnace-sg"
-  vpc-id              = module.maintainance.vpc-id
+  security-group-name = "maintenance-sg"
+  sg-tag              = "maintennace-sg"
+  vpc-id              = module.maintenance.vpc-id
 
 }
 
 # outbound rules
 
-module "maintainance-sg-outbound-all-traffic" {
+module "maintenance-sg-outbound-all-traffic" {
   source            = "./modules/vpc/security-group/egress"
-  security-group-id = module.maintainance-security-group.security-group-id
+  security-group-id = module.maintenance-security-group.security-group-id
   port              = -1
   protocol          = "-1"
 }
 
 # ingress rules
 
-module "maintainance-sg-inbound-ssh" {
+module "maintenance-sg-inbound-ssh" {
   source            = "./modules/vpc/security-group/ingress"
   security-group-id = module.maintainance-security-group.security-group-id
   port              = 22
@@ -294,9 +294,9 @@ module "maintainance-sg-inbound-ssh" {
   cidr-blocks       = "0.0.0.0/0"
 }
 
-module "maintainance-sg-inbound-nfs" {
+module "maintenance-sg-inbound-nfs" {
   source            = "./modules/vpc/security-group/ingress"
-  security-group-id = module.maintainance-security-group.security-group-id
+  security-group-id = module.maintnance-security-group.security-group-id
   port              = 2049
   protocol          = "tcp"
   cidr-blocks       = "0.0.0.0/0"
