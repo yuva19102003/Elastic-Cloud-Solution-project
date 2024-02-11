@@ -4,6 +4,7 @@
 
 ## Elastic Cloud Solution: VPC Peering, EFS, Auto Scaling, SESSION Manager and Load Balancer for Resilient and Efficient Applications
 ## demonstrating in both management console and Terraform.
+![DIAGRAM](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/elastic-cloud-solution-project.gif)
 
 | Section | links |
 | --- | --- |
