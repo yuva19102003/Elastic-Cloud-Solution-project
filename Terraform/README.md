@@ -4,7 +4,7 @@
 
 ----
 
-![DIAGRAM](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/elastic-cloud-solution-project.gif)
+![DIAGRAM](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/ELASTIC-CLOUD-SOLUTION.drawio.svg)
 
 
 **Project Overview:**
