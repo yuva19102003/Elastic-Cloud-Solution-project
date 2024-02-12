@@ -4,7 +4,7 @@
 
 ## Elastic Cloud Solution: VPC Peering, EFS, Auto Scaling, SESSION Manager and Load Balancer for Resilient and Efficient Applications using aws management console
 
-![DIAGRAM](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/elastic-cloud-solution-project.gif)
+![DIAGRAM](https://github.com/yuva19102003/Elastic-Cloud-Solution-project/blob/master/ELASTIC-CLOUD-SOLUTION.drawio.svg)
 
 **Project Overview:**
 - **Objective:** Establish a robust and scalable architecture across two Virtual Private Clouds (VPCs) on a cloud platform.
